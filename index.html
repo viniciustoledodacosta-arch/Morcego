@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying Bat Animation</title>
+    <style>
+        body {
+            background-color: #000;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .bat {
+            position: absolute;
+            width: 100px; /* Adjust as needed */
+            height: auto;
+            animation: fly 5s linear infinite;
+        }
+
+        @keyframes fly {
+            0%   { left: -100px; top: 50%; transform: translateY(-50%) rotate(0); }
+            50%  { left: calc(100% + 100px); top: 20%; transform: translateY(-20%) rotate(10deg); }
+            100% { left: -100px; top: 50%; transform: translateY(-50%) rotate(0); }
+        }
+    </style>
+</head>
+<body>
+    <img src="qq.gif" alt="Flying Bat" class="bat">
+</body>
+</html>
